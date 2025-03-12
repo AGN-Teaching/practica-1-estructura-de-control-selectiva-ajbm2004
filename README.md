@@ -26,7 +26,7 @@ Seguridad social: Se descuenta el 2.5% del sueldo bruto.
 Caja de ahorros: Dependiendo de la elección del usuario, se aplica un descuento fijo o un porcentaje del 3% o 5%.
 
 Ahorro solidario: Se descuenta el 1% o 2%, según la opción seleccionada.
-comentarios
+comentarios del reporte 
 Este programa ofrece un cálculo preciso del sueldo neto considerando distintos factores, como la participación en la caja de ahorros y el ahorro solidario. Gracias a su diseño modular basado en funciones, el código es claro y fácil de modificar. Se recomienda probar diferentes valores de entrada para verificar su correcto desempeño en distintas situaciones.
 
 
