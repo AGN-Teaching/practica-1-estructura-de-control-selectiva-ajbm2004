@@ -1,5 +1,5 @@
 def calcular_sueldo_neto(salario_por_hora, horas_trabajadas, tipo_caja_ahorro=None, ahorro_solidario=0):
-    # Cálculo del sueldo bruto
+    # Cálculacion del sueldo neto
     if horas_trabajadas <= 160:
         sueldo_bruto = salario_por_hora * horas_trabajadas
     elif horas_trabajadas <= 200:
@@ -23,7 +23,7 @@ def calcular_sueldo_neto(salario_por_hora, horas_trabajadas, tipo_caja_ahorro=No
         (375975.62, float("inf"), 117912.32, 35.00)
     ]
 
-    # Cálculo del ISR
+    # Cálculamos el ISR
     isr = 0
     for limite_inferior, limite_superior, cuota_fija, porcentaje in tabla_isr:
         if limite_inferior <= sueldo_bruto <= limite_superior:
@@ -33,7 +33,7 @@ def calcular_sueldo_neto(salario_por_hora, horas_trabajadas, tipo_caja_ahorro=No
     # Seguridad Social (2.5%)
     seguridad_social = sueldo_bruto * 0.025
 
-    # Descuento por caja de ahorros
+    # menciona los descuentos de caja de ahorro
     if tipo_caja_ahorro == "cuota_fija":
         descuento_caja = 1000.00
     elif tipo_caja_ahorro == "3%":
@@ -51,7 +51,7 @@ def calcular_sueldo_neto(salario_por_hora, horas_trabajadas, tipo_caja_ahorro=No
     else:
         descuento_solidario = 0.00
 
-    # Cálculo del sueldo neto
+    # se tiene que calcular el sueldo neto
     sueldo_neto = sueldo_bruto - (isr + seguridad_social + descuento_caja + descuento_solidario)
 
     return {
@@ -64,7 +64,7 @@ def calcular_sueldo_neto(salario_por_hora, horas_trabajadas, tipo_caja_ahorro=No
     }
 
 
-# Ejemplo de uso
+# esta seria la copilacion 
 datos = calcular_sueldo_neto(salario_por_hora=100, horas_trabajadas=180, tipo_caja_ahorro="5%", ahorro_solidario=2)
 for clave, valor in datos.items():
     print(f"{clave}: ${valor:.2f}")
